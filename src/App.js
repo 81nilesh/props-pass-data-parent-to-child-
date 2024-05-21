@@ -15,8 +15,7 @@ function App() {
   return (
     <div className='App'>
       <h1>Hello in React js</h1>
-      <UserCart name="Nilesh Choudhary" />
-
+      {/* <UserCart name="Nilesh Choudhary" /> */}
 
       {userData.map((user, index) => (
         <UserCart
