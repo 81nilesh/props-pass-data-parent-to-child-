@@ -2,22 +2,14 @@ import React, { useState } from 'react';
 import "./App.css"
 
 const App = () => {
-  const [isValue, setIsValue] = useState("");
-  const [inputValueShow, setInputValueHide] = useState(false);
-
-
-  const handleClick = (evennt) => {
-    console.log(evennt.target.value)
-    setIsValue(evennt.target.value);
-
-    setInputValueHide(false);
-  }
+  const [status, setStatus] = useState(true)
   return (
     <div className='App'>
-      <h1>{inputValueShow ? isValue : ""}</h1>
-      <input type="text" onChange={handleClick} />
+      <h1>Show Hide & Toggle</h1>
+      {status ? <div className='status'>Contant</div> : null}
 
-      <button onClick={() => setInputValueHide(true)}>submit</button>
+      <button onClick={() => setStatus(false)}>Hide</button>
+      <button onClick={() => setStatus(true)}>Show</button>
     </div>
   );
 }
