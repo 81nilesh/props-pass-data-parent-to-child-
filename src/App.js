@@ -10,6 +10,9 @@ const App = () => {
 
       <button onClick={() => setStatus(false)}>Hide</button>
       <button onClick={() => setStatus(true)}>Show</button>
+
+
+      <button onClick={() => setStatus(!status)}>Toggle</button>
     </div>
   );
 }
